@@ -1,0 +1,246 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    color: #6699cc;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.clearer {
+    clear: both;
+    float: none;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+    padding: 7px 20px;
+}
+header h1 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #666;
+    float: left;
+    text-shadow: 1px 1px 3px #ccc;
+}
+header p.byline {
+    float: right;
+    font-size: 0.75em;
+    color: #ddd;
+    margin-top: 5px;
+}
+
+ul.methods {
+    padding: 20px;
+    width: 70%;
+    float: left;
+}
+
+ul.methods > li {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #edf0f9;
+}
+/*
+section:before {
+    content: "Macro";
+    font-size: 0.8em;
+    line-height: 0.8em;
+    font-weight: bold;
+    color: #eee;
+    background-color: #78c754;
+    vertical-align: bottom;
+    float: left;
+    padding: 4px 3px 3px 3px;
+    margin-right: 5px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+section.filter:before {
+    content: "Filter";
+    background-color: #dad345;
+}
+*/
+ul.methods > li h2,
+ul.methods > li h3,
+ul.methods > li h4 {
+    font-size: 1.2em;
+    color: #999;
+    margin-right: 10px;
+    float: left;
+}
+ul.methods > li h3 {
+    color: black;
+    float: left;
+    font-weight: bold;
+}
+ul.methods > li h4 {
+    color: #78c754;
+}
+ul.methods > li.filter h4 {
+    color: #dad345;
+}
+ul.methods > li .content {
+    margin-left: 30px;
+}
+
+/** Description section **/
+
+.description {
+    padding-top: 10px;
+}
+.description code {
+    white-space: pre;
+    color: #666;
+    font-size: 0.8125em;
+}
+.description figure.example {
+    margin: 10px 0 0 0;
+}
+.description figure.example figcaption {
+    margin-bottom: 10px;
+}
+.description figure.example p {
+    white-space: pre;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    padding: 5px;
+    overflow: auto;
+}
+
+/** Generic definition list styles **/
+section dl dt {
+    font-weight: bold;
+    clear: left;
+    float: left;
+    margin-right: 10px;
+}
+section dl dd {
+    margin: 0 0 3px 40px;
+}
+section dl dd ul li {
+    list-style: disc;
+    margin-top: 2px;
+}
+
+/** API doc section **/
+.apidoc {
+}
+.apidoc > div {
+    display: none;
+    margin-bottom: 10px;
+}
+.apidoc h5 {
+    margin-top: 10px;
+}
+.apidoc dl {
+    margin: 5px 0 0 20px;
+}
+.apidoc dl dt .type {
+    font-weight: normal;
+    color: #999;
+}
+.apidoc dl dt .type:before {
+    content: "(";
+}
+.apidoc dl dt .type:after {
+    content: ")";
+}
+
+/** Info section **/
+.info dl {
+    margin: 10px 0 0 0;
+    font-size: 0.875em;
+    color: #999;
+}
+.info dl dt {
+    font-weight: normal;
+    margin-right: 4px;
+}
+.info dl dt:after {
+    content: ":";
+}
+.info dl dd.stable {
+    color: #046c04;
+}
+.info dl dd.experimental {
+    color: #cfcf00;
+}
+.info dl dd.deprecated {
+    color: #be0909;
+}
+
+/** section toggle link **/
+a.toggle {
+    display: inline-block;
+    font-size: 0.875em;
+    width: auto;
+}
+a.toggle:before {
+    content: "\0025ba\0000a0";
+}
+a.toggle.expanded:before {
+    content: "\0025bc\0000a0";
+}
+
+/** Source section **/
+.source figure {
+    display: none;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    margin: 5px 0 10px 0;
+    padding: 5px;
+    overflow: auto;
+}
+.source figure figcaption {
+    margin-bottom: 10px;
+    font-size: 0.875em;
+    color: #999;
+}
+.source figure code {
+    white-space: pre;
+    font-size: 0.8125em;
+}
+
+/** Navigation bar / method list **/
+nav {
+    float: right;
+    padding: 20px;
+    width: 20%;
+}
+nav input {
+    border: 1px solid #999;
+    font-size: 1em;
+}
+nav ul {
+    font-size: 0.8em;
+    margin-top: 20px;
+}
+nav ul li {
+    margin-top: 4px;
+    white-space: nowrap;
+}
+nav ul li:before {
+    display: inline-block;
+    width: 10px;
+    text-align: center;
+    content: "M";
+    font-size: 0.8em;
+    line-height: 0.8em;
+    font-weight: bold;
+    color: #eee;
+    background-color: #60a342;
+    vertical-align: bottom;
+    padding: 4px 3px 3px 3px;
+    margin-right: 3px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+nav ul li.filter:before {
+    content: "F";
+    background-color: #ccc20b;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html >
+
+<html lang="en" dir="ltr">
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" media="screen, handheld" title="CSS Stylesheet" href="static/css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="screen, handheld" title="CSS Stylesheet" href="static/css/main.css" />
+        <link rel="stylesheet" type="text/css" media="screen, handheld" title="CSS Stylesheet" href="static/css/highlight.default.css" />
+        <script type="text/javascript" src="static/js/jquery.js"></script>
+        <script type="text/javascript" src="static/js/jquery.ba-hashchange.js"></script>
+        <script type="text/javascript" src="static/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="static/js/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>{{title}}</h1>
+            <p class="byline">generated {{timestamp}}</p>
+            <div class="clearer"></div>
+        </header>
+        <ul class="methods">
+        {{#list}}
+            <li id="{{{className}}}" class="{{type}}">
+                <hgroup>
+                    <h2>{{prototype}}</h2>
+                    <h4>{{type}}</h4>
+                    <h3>{{name}}({{{join args}}})</h3>
+                </hgroup>
+                <div class="content clearer">
+                    <section class="description">
+                        {{#description}}
+                            <p>{{{description}}}</p>
+                        {{/description}}
+                        {{#hasExample}}
+                            <figure class="example">
+                                <figcaption>Example:</figcaption>
+                                <p><code>{{example}}</code></p>
+                            </figure>
+                        {{/hasExample}}
+                    </section>
+                    <section class="info">
+                        <dl>
+                            <dt>Status</dt>
+                            <dd class="{{status}}">{{status}}</dd>
+                            <dt>Since</dt>
+                            <dd class="{{since}}">{{since}}</dd>
+                        </dl>
+                    </section>
+                    <section class="apidoc">
+                        <a href="#" class="toggle apidoc">API Documentation</a>
+                        <div>
+                        {{#hasParameters}}
+                            <h5>Arguments:</h5>
+                            <dl>
+                                {{#parameters}}
+                                    <dt>{{name}} <span class="type">{{type}}</span></dt>
+                                    <dd>{{{description}}}</dd>
+                                {{/parameters}}
+                            </dl>
+                        {{/hasParameters}}
+                        {{#hasReturnValue}}
+                            <h5>Returns:</h5>
+                            <dl>
+                                <dt><span class="type">{{returnType}}</span></dt>
+                                <dl>{{{returnValue}}}</dl>
+                            </dl>
+                        {{/hasReturnValue}}
+                        </div>
+                    </section>
+                    <section class="source clearer">
+                        <a href="#" class="toggle source">Source</a>
+                        <figure class="source">
+                            <figcaption>{{path}} (Line {{lineno}})</figcaption>
+                            <p><code>{{source}}</code></p>
+                        </figure>
+                    </section>
+                </div>
+            </li>
+        {{/list}}
+        </ul>
+        <nav>
+            <input id="search" type="text" placeholder="Search" />
+            <ul>
+                {{#list}}
+                <li class="{{type}}"><a href="#{{{className}}}">{{prototype}} {{name}}</a></li>
+                {{/list}}
+            </ul>
+        </nav>
+    </body>
+</html>
